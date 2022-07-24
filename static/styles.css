@@ -1,12 +1,42 @@
 body {
     margin: 5%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: larger;
     background-color: black;
     color: white;
+    
+}
+
+body > header {
+    display: flex;
+    justify-content: space-between;
+}
+
+body > header > h1 {
+    font-size: xx-large;
+}
+
+body > header > nav {
+    margin-top: 2%;
+    color: orange;
+    justify-content: space-evenly;
 }
 
 body > div > p {
     color: green;
     display: flex;
+}
+
+body > h2 {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+body > section {
+    margin-top: 10%;
+    margin-bottom: 25%;
+    display: flex;
+}
+
+body > section > form > div {
+    margin-top: 40%;
 }
