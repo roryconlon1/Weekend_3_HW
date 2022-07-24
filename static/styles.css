@@ -1,0 +1,12 @@
+body {
+    margin: 5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    background-color: black;
+    color: white;
+}
+
+body > div > p {
+    color: green;
+    display: flex;
+}

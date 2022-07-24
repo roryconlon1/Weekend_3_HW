@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+    {% block content %} 
+        <h1> Library </h1>
+        {% for book in books %}
+        <div>
+            <p>
+                <b>{{ book.title }}</b> <a href="/bookstore/{{books.index(book)}}">-></a>
+            </p>
+            <p>
+                {{ book.author }}
+            </p>
+            <p>
+                <i>{{ book.genre }}</i>
+            </p>
+            <p>
+                <b>{{ book.date }}</b>
+            </p>
+            <p>
+                {% if book.checked_out == True %}
+            <span>&#9786</span>
+            {% else %}
+            <span>&#9785</span>
+            {% endif %}
+            </p>
+        </div>
+        {% endfor %}
+
+    {% endblock %}
