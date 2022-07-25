@@ -8,5 +8,11 @@ books = [book1, book2, book3]
 def add_book(book):
     books.append(book)
 
-def delete_book(book):
-    books.remove(book)
+def delete_book(title):
+    book_to_remove = None
+    for book in books:
+        if book.title == title:
+            book_to_remove = book
+            break
+
+    books.remove(book_to_remove)

@@ -1,6 +1,7 @@
+from crypt import methods
 from flask import redirect, render_template, request
 from app import app
-from models.library_book import add_book, books
+from models.library_book import add_book, books, delete_book
 from models.books import Book
 
 @app.route('/bookstore')
@@ -25,6 +26,11 @@ def create():
     date = request.form['date']
     new_book = Book(title, author, genre, checked_out, date)
     add_book(new_book)
+    return redirect('/bookstore')
+
+@app.route('/bookstore/delete/<title>', methods=['POST'])
+def books_delete(title):
+    delete_book(title)
     return redirect('/bookstore')
 
 
